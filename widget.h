@@ -8,7 +8,7 @@ class Widget {
 	
 	public:
 		// Public Declarations
-		Widget(int a, int b) : a_{a}, b_{b} {}
+		Widget(int a, int b) : a_{a}, b_{b} {std::cout << "Widget()\n";}
 		void print() {
 			std::cout << "a=" << a_ << "\tb=" << b_ << "\n";
 		}

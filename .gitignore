@@ -1,3 +1,5 @@
 uptrtest.layout
 uptrtest.dev
 Makefile.win
+*.o
+*.exe

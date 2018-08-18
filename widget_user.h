@@ -18,7 +18,7 @@ class  Widget_user {
 		
 		Widget_user(const Widget_user& rhs): x_{rhs.x_}, y_{rhs.y_} {
 			widget = std::make_unique<Widget>(x_, y_);
-			std::cout << "copy: x_=" << widget->x_ << "  y_=" << widget->y_ << "\n";
+			std::cout << "copy: x_=" << x_ << "  y_=" << y_ << "\n";
 		}
 		Widget_user& operator=(const Widget_user& rhs) {
 			x_ = rhs.x_;
