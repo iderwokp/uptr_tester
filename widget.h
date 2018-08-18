@@ -12,8 +12,9 @@ class Widget {
 		void print() {
 			std::cout << "a=" << a_ << "\tb=" << b_ << "\n";
 		}
+		int& a() { return a_;}
+		int& b() {    return b_;}
 	
 };
 
 #endif
-
