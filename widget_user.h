@@ -32,8 +32,11 @@ class  Widget_user {
 		void print() {
 			widget->print();
 		}
+	void	set_ab(int x, int y) {
+		    widget->a() =    x;
+		    widget->b() =    y;
+		}
 	
 };
 
 #endif
-
