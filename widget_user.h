@@ -7,13 +7,16 @@
 class  Widget_user {
 	// Private section
 	std::unique_ptr<Widget> widget;
-	
+	int* balle;
 	public:
+		
 		int y_{};
 		int x_{};
 		// Public Declarations
+		Widget_user() = default;
 		Widget_user(int x, int y) : x_{x}, y_{y} {
 			widget = std::make_unique<Widget>(x_, y_);
+			balle = new int[10];
 		}
 		Widget_user(std::unique_ptr<Widget> wid, int x, int y): widget{std::move(wid)}, x_{x}, y_{y} {}; 
 		
@@ -29,7 +32,9 @@ class  Widget_user {
 			std::cout << " operator=: x_=" << x_ << "  y_=" << y_ << "\n";
 			return *this;
 		}
-		
+		~Widget_user() {
+			delete[] balle;
+		}
 		
 		void print() {
 			widget->print();
